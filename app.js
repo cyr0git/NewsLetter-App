@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "\\signup.html");
+    res.sendFile(__dirname + "/signup.html");
 })
 
 app.post('/', (req, res) => {
@@ -42,10 +42,10 @@ app.post('/', (req, res) => {
 
         if(response.statusCode===200)
         {
-            res.sendFile(__dirname +"\\success.html");
+            res.sendFile(__dirname +"/success.html");
         }
         else{
-            res.sendFile(__dirname+"\\failure.html");
+            res.sendFile(__dirname+"/failure.html");
         }
 
         response.on("data", function (data) {
